@@ -1,0 +1,12 @@
+<div style="color:white;">
+	<%= bootstrap_form_for(@concert) do |f| %>
+		<%= f.text_field :artist %>
+		<%= f.date_field :date %>
+		<%= f.text_field :venue %>
+		<%= f.text_field :city %>
+		<%= f.text_field :ticket_price %>
+		<%= f.text_field :description %>
+	
+		<%= f.submit "Save Concert" %>
+	<% end %>
+</div>

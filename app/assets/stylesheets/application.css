@@ -1,0 +1,44 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/*
+ *= require rails_bootstrap_forms
+ */
+
+ .logo{
+ 	width: 90px;
+ 	height: 85px;
+ 	margin: 10px;
+ }
+ .top{
+ 	padding-top: 25px;
+ }
+ .header-font{
+	color: orange;
+	background-color: black;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-left: 25px;
+ }
+ .background{
+ 	background-image: url("http://vocalstreet.com/wp-content/uploads/2012/11/hq-wallpapers_ru_music.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+ }
+
+.view{
+	width: 300px;
+	background-color: 	
+}

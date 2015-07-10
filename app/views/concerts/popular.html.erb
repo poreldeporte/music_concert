@@ -1,0 +1,17 @@
+<% if @concert != [] %>
+	<% @concert.each_with_index do |conc, i| %>
+		<div class="<%= color_class(i%2) %>">
+			<div class="<%= artist_class(i%2) %>"><%= conc.artist.upcase %></div>
+			
+			<div class="city"><%= conc.city.upcase %></div>
+			
+			<div class="date"><%= pretty_date(conc.date).upcase %></div>
+			<br>
+			<a href=<%= concert_path(conc) %> class="btn <%= button_class(i%2) %>">DETAILS</a>
+			<br>
+		</div>
+		<br>
+		<% end %>
+<% else %>
+	Sorry! There are not concerts available! Please come again later.
+<% end %>

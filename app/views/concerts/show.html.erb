@@ -1,0 +1,28 @@
+<div class="concert">
+	<div class="artist"><%= @concert.artist %></div>
+	<br>
+	<div class="city"><%= @concert.venue %></div>
+	<br>
+	<div class="city"><%= @concert.city %></div>
+	<br>
+	<div class="city">$<%= @concert.ticket_price %></div>
+	<br>
+	<div class="date"><%= @concert.description %></div>
+	<br>
+	<div class="date"><%= pretty_date(@concert.date) %></div>
+	<br>
+	<div class="city">Comments:</div>
+	<br>
+	<% @post.each do |com| %>
+		<div class="comment"><%= com.content %></div>
+		<br>
+	<% end %>
+
+	<br>
+	<br>
+	<%= bootstrap_form_for([@concert, @comments]) do |f| %>
+		<%= f.text_field :content, label: "Add Comment" %>
+	
+		<%= f.submit "Save Comment", class: "btn button-purple" %>
+	<% end %>
+</div>
