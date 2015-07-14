@@ -1,5 +1,10 @@
-<div class="concert">
+<div class="concert" style="text-align:center;">
 	<div class="artist"><%= @concert.artist %></div>
+	<br>
+	<% if @artists != nil %>
+		<img class="img-rounded" src="<%= @artists.images[0]["url"] %>" alt="Artist Picture" style="width:300px;height:350px;">
+	<iframe class="img-rounded" src="<%= @artists.top_tracks(:US)[0].preview_url%>" width="300" height="70" frameborder="0" allowtransparency="true"></iframe>
+	<% end %>
 	<br>
 	<div class="city"><%= @concert.venue %></div>
 	<br>
@@ -11,10 +16,10 @@
 	<br>
 	<div class="date"><%= pretty_date(@concert.date) %></div>
 	<br>
-	<div class="city">Comments:</div>
+	<div class="city" style="text-align:left">Comments:</div>
 	<br>
 	<% @post.each do |com| %>
-		<div class="comment"><%= com.content %></div>
+		<div class="comment" style="text-align:left;"><%= com.content %></div>
 		<br>
 	<% end %>
 

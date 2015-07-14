@@ -17,10 +17,11 @@ class ConcertsController < ApplicationController
 	end
 	def show
 		@concert = Concert.find(params[:id])
+		artist = RSpotify::Artist.search(@concert.artist)
+		@artists = artist[0]
 		@comments = Comment.new
 		@post = @concert.comments
 
-		
 		render('show')
 	end
 	def upcoming
