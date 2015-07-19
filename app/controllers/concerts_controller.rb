@@ -32,10 +32,13 @@ class ConcertsController < ApplicationController
 		render('upcoming')
 	end
 	def popular
-		
 		@concert = Concert.popular
 
 		render('popular')
+	end
+	def tracks
+		
+		render('track_player')
 	end
 	def edit
 	end

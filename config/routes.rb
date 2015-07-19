@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/concerts/popular' => 'concerts#popular'
 
-
+  get 'concerts/tracks' => 'concerts#tracks'
   resources :concerts do
     resources :comments
   end
