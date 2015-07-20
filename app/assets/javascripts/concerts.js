@@ -1,3 +1,4 @@
+ $(document).on("ready", function(){
 function onSubmit(event){
 	event.preventDefault();
 	function onSuccess(list){
@@ -134,7 +135,5 @@ function onSubmit(event){
 	load_track.fail(onFailure);
 }
 
-
-
-
 $('#submit').on('click', onSubmit);
+}
